@@ -139,9 +139,9 @@ chmod a+r /var/lib/mailinabox/mta-sts.txt
 
 # make a default homepage
 if [ -d $STORAGE_ROOT/www/static ]; then mv $STORAGE_ROOT/www/static $STORAGE_ROOT/www/default; fi # migration #NODOC
-mkdir -p $STORAGE_ROOT/www/default
-if [ ! -f $STORAGE_ROOT/www/default/index.html ]; then
-	cp conf/www_default.html $STORAGE_ROOT/www/default/index.html
+mkdir -p $STORAGE_ROOT/www/default/public
+if [ ! -f $STORAGE_ROOT/www/default/public/index.php ]; then
+	cp conf/www_default.php $STORAGE_ROOT/www/default/public/index.php
 fi
 chown -R $STORAGE_USER $STORAGE_ROOT/www
 
